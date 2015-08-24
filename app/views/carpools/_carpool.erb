@@ -1,0 +1,16 @@
+<li id="carpool-<%= carpool.id %>">
+  <%= link_to gravatar_for(carpool.user, size: 50), carpool.user %>
+  <span class="user"><%= link_to carpool.user.name, carpool.user %></span>
+  <span class="content">Time:<%= carpool.time %></span>
+  <span class="content">From: <%= carpool.fromplace %> to: <%= carpool.toplace %>  </span>
+  <span class="content">Price:<%= carpool.price %> </span>
+  <span class="content">Contact:<%= carpool.contact %> </span>
+  <span class="content">Notes:<%= carpool.notes %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(carpool.created_at) %> ago.
+    <% if current_user?(carpool.user) %>
+      <%= link_to "delete", carpool, method: :delete,
+                  data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>

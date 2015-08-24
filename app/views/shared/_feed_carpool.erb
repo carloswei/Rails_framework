@@ -1,0 +1,6 @@
+<% if @feed_carpool_items.any? %>
+    <ol class="microposts">
+      <%= render @feed_carpool_items %>
+    </ol>
+    <%= will_paginate @feed_carpool_items %>
+<% end %>

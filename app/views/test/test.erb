@@ -1,0 +1,41 @@
+# this is the format for carpool Timetable
+# search bar just have time and place
+# post have the price
+#text_field is single line
+#text_area is multi-line
+<p>
+  #searh 2
+  <%=form.label :date%>
+  <%form.date_select :start%>
+
+  <%=form.label  :time_interval%>
+  <%=form.time_select :start_time%>
+
+  <%=form.label :To %>
+  <%=form.time_select :end_time%>
+</p>
+
+<br>
+
+<p>
+  #searh 1
+  <%=form.label :From%>
+  <%form.text_area :start_place%>
+  <%=form.label :To %>
+  <%=from.text_area :end_place%>
+</p>
+
+<p>
+  <%=form.label :price%>
+  <%=form.text_field :price%>
+</p>
+
+<p>
+  <%=form.label :contact%>
+  <%=form.text_field :contact%>
+</p>
+
+<p>
+  <%=form.label :Notes%>
+  <%=form.text_area :note%>
+</p>

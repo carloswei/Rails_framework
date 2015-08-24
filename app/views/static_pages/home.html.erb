@@ -1,0 +1,39 @@
+<% if logged_in? %>
+    <div class="row">
+      <aside class="col-md-4">
+        <section class="user_info">
+          <%= render 'shared/user_info' %>
+        </section>
+        <section class="stats">
+          <%= render 'shared/stats' %>
+        </section>
+        <section class="carpool_form">
+          <%= render 'shared/carpool_form' %>  <!--input region -->
+        </section>
+      </aside>
+      <div class="col-md-8">
+        <h3>Information</h3>
+        <%= render 'shared/feed_carpool' %>              <!--feed -->
+      </div>
+    </div>
+<% else %>
+
+    <aside class="col-md-4">
+      <div class="center jumbotron">
+         <h1>Welcome</h1>
+
+         <h2>
+            This is E-ca
+          </h2>
+
+          <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+      </div>
+    </aside>
+
+       <div class="col-md-8">
+
+          <h3>Information</h3>
+         <%= render 'shared/feed_carpool' %>    <!--feed -->
+        </div>
+
+<% end %>
