@@ -12,6 +12,7 @@ gem 'coffee-rails', '4.1.0'
 
 gem 'jquery-rails', '4.0.3'
 gem 'jquery-ui-rails'
+gem 'jquery-turbolinks'
 
 gem 'turbolinks',   '2.3.0'
 gem 'jbuilder',     '2.2.3'
@@ -33,5 +34,5 @@ end
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  gem  'mysql2'
+  gem 'mysql2',         '~> 0.3.17'
 end

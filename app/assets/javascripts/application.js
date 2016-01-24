@@ -13,15 +13,26 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//require jquery.turbolinks
 //= require bootstrap
-//= require turbolinks
+// require turbolinks
 //= require_tree
 
+
+$(document).on('page:change', function() {
+
+    tabOverDemoSetup()
+
+});
+
+
+
+/**
 $(function() {
     $( "#datepicker" ).datepicker();
 });
 
-
+//solve the turbolinks problem %%
 
 $(function tabOverDemoSetup() {
     $('.time').
@@ -41,3 +52,116 @@ $(document).ready(function(){
         $("#panel").slideToggle("slow");
     });
 });
+**/
+
+
+
+
+/**
+window.onload=function()
+{
+{
+
+    $(function tabOverDemoSetup() {
+        $('.time').click( function(e) { $(this).off('click').AnyTime_picker().focus(); } ).keydown(
+            function(e) {
+                var key = e.keyCode || e.which;
+                if ( ( key != 16 ) && ( key != 9 ) ) { // shift, del, tab
+                    $(this).off('keydown').AnyTime_picker().focus();
+                    e.preventDefault();
+                }
+            } );
+    })();
+
+    $(function() {
+        $( "#datepicker" ).datepicker();
+    });
+
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+        });
+    });
+}
+**/
+$(document).on('ready page:load', function() {
+
+    tabOverDemoSetup()
+
+
+/**
+    $(function tabOverDemoSetup() {
+        $('.time').click( function(e) { $(this).off('click').AnyTime_picker().focus(); } ).keydown(
+            function(e) {
+                var key = e.keyCode || e.which;
+                if ( ( key != 16 ) && ( key != 9 ) ) { // shift, del, tab
+                    $(this).off('keydown').AnyTime_picker().focus();
+                    //e.preventDefault();
+                }
+            } );
+    })();
+**/
+
+});
+/**
+$(function() {
+    initPage();
+});
+
+$(window).bind('page:change', function() {
+    $(function tabOverDemoSetup() {
+        $('.time').click( function(e) { $(this).off('click').AnyTime_picker().focus(); } ).keydown(
+            function(e) {
+                var key = e.keyCode || e.which;
+                if ( ( key != 16 ) && ( key != 9 ) ) { // shift, del, tab
+                    $(this).off('keydown').AnyTime_picker().focus();
+                    e.preventDefault();
+                }
+            } );
+    })();
+
+    $(function() {
+        $( "#datepicker" ).datepicker();
+    });
+tabOverDemoSetup()
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+        });
+    });
+});
+function initPage() {
+    $(function tabOverDemoSetup() {
+        $('.time').cltimeick( function(e) { $(this).off('click').AnyTime_picker().focus(); } ).keydown(
+            function(e) {
+                var key = e.keyCode || e.which;
+                if ( ( key != 16 ) && ( key != 9 ) ) { // shift, del, tab
+                    $(this).off('keydown').AnyTime_picker().focus();
+                    e.preventDefault();
+                }
+            } );
+    })();
+
+    $(function() {
+        $( "#datepicker" ).datepicker();
+    });
+
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+        });
+    });
+}
+
+**/
+
+function tabOverDemoSetup() {time
+    $('.time').click( function(e) { $(this).off('click').AnyTime_picker().focus(); } ).keydown(
+        function(e) {
+            var key = e.keyCode || e.which;
+            if ( ( key != 16 ) && ( key != 9 ) ) { // shift, del, tab
+                $(this).off('keydown').AnyTime_picker().focus();
+                //e.preventDefault();
+            }
+        } );
+}

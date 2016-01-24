@@ -14,3 +14,15 @@
  *= require_self
  *= require jquery-ui
  */
+
+#search_bar{
+     position:fixed;
+     top:15px;
+}
+
+#carheader
+{
+    background-color: greenyellow;
+    border-color: greenyellow;
+}
+

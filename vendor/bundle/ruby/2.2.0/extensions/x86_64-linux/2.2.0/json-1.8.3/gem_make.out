@@ -1,0 +1,9 @@
+/home/xinwei/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20150824-27910-299umr.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+make "DESTDIR=" install

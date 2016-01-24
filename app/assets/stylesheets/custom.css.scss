@@ -53,21 +53,27 @@ p {
   line-height: 1.7em;
 }
 
+.nav_header{
+    font-weight:600;
+}
 
 /* header */
 
+
 #logo {
+  font-family:Times;
+  font-style: italic;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
+  color:black;
+  //letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
     color: white;
-    text-decoration: none;
+    text-decoration: none;li{
+}
   }
 }
 
@@ -94,7 +100,7 @@ footer {
       float: left;
       margin-left: 15px;
     }
-  }
+  }color: $gray-light;
 }
 
 $gray-medium-light: #eaeaea;
